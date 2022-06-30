@@ -1,29 +1,26 @@
 #!/bin/bash
-read -p "enter a number:" date
-case $date in
-1)
-echo sunday;;
+read -p "Enter a Day between (1-7):" x
 
+if [[ $x -gt 7 ]] && [[ $x -eq 0 ]]; then
+	echo Invalid Day. Input should be between 1-7.
+	exit;
+fi
 
-2)
-echo monday;;
-
-3)
-echo tuesday;;
-
-4)
-echo wednesday;;
-
-5)
-echo thursday;;
-
-6)
-echo friday;;
-
-7)
-echo saturday;; 
-
-*)
-echo invalid day;;
-
+case $x in
+	1)
+		echo Sunday;;
+	2)
+		echo Monday;;
+	3)
+		echo Tuesday;;
+	4)
+		echo Wednesday;;
+	5)
+		echo Thursday;;
+	6)
+		echo Friday;;
+	7)
+		echo Saturday;; 
+	*)
+		echo Invalid Day. Input should be between 1-7.
 esac

@@ -9,7 +9,7 @@ function isPrime(){
 		return;
 
 	else
-		for (( i=2;i<$m;i++ ))
+		for (( i=2;i<=$m;i++ ))
 		do
 			if [ $(($input % $i)) -eq 0 ]
 				then
