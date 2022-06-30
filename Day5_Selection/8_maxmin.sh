@@ -10,27 +10,30 @@ s=$((a*b+c))
 
 max=$p;min=$p;
 
-if [ $q -gt $max ];
-then 
-max=$q;
-elif [ $r -gt $max ];
-then
-max=$r; 
-elif [ $s -gt $max ];
-then
-max=$s;
+if [ $q -gt $max ];then 
+	max=$q;
 fi
 
-if [ $q -lt $min ];
-then
-min=$q;
-elif [ $r -lt $min ];
-then
-min=$r;
-elif [ $s -lt $min ];
-then
-min=$s;
+if [ $r -gt $max ];then
+	max=$r; 
 fi
+
+if [ $s -gt $max ];then
+	max=$s;
+fi
+
+if [ $q -lt $min ];then
+	min=$q;
+fi
+
+if [ $r -lt $min ];then
+	min=$r;
+fi
+
+if [ $s -lt $min ];then
+	min=$s;
+fi
+
 echo $max
 echo $min
 echo $p $q $r $s;
